@@ -152,6 +152,7 @@
 </main><!-- /.container -->
 
 <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.lazy.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./js/masonry.pkgd.min.js"></script>
 <script type="text/javascript" src="./slick/slick.min.js"></script>
@@ -166,17 +167,20 @@ $(document).ready(function(){
     arrows: false
   });
 
-  $('#sidebarCollapse').on('click', function () {
-    $('#sidebar').toggleClass('active');
-  });
-});
-$(window).on("load", function() {
   $('.grid').masonry({
     itemSelector: '.grid-item'
   });
   $('.grid').slickLightbox({
     itemSelector        : 'a',
     navigateByKeyboard  : true
+  });
+  $(".grid-item img").Lazy({
+        afterLoad: function(element) {
+          $('.grid').masonry('reload');
+        }
+    });
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
   });
 });
 </script>
