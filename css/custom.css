@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Bellefair&display=swap');
+
+html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.25;
+	font-size: 20px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main .header {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bellefair', serif;
+}
+h1 {
+  font-size: 3.5em;
+}
+
+.container-fluid,
+ #artist-header {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+.navbar {
+  height: 66px;
+  font-size: 28px;
+  background-color: white;
+  border-bottom:  1px solid black;
+}
+.navbar-brand {
+  font-size: 39px;
+  padding: 20px 0;
+  font-family: 'Bellefair', serif;
+}
+.nav-item.active {
+  text-decoration: underline;
+}
+.navbar-nav {
+	width:100%
+}
+#sidebarCollapse {
+  display: none;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  font-family: 'Bellefair', serif;
+	background: #8090d3;
+	color: #fff;
+	transition: all 0.3s;
+	flex-flow: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-top: 80px;
+	box-shadow: 4px 0 6px -4px gray;
+	font-size: 36px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #6d7fcc;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+}
+#sidebar {
+  min-width: 260px;
+  max-width: 260px;
+  min-height: 100vh;
+}
+
+#artist-header .birds {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+#artist-header {
+  margin-top: 100px;
+}
+#artist-header h1 {
+  font-size: 5.5rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+#fixed-image-header {
+  max-height: 80px;
+  object-fit: cover;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 6px -4px gray;
+}
+
+.grid {
+  margin: auto;
+}
+.grid-item {
+  width: 25%;
+  padding: 1%;
+}
+.grid-item img {
+  width: 100%;
+}
+
+.carousel-container {
+  /* background-color: rgba(218, 223, 225, .5); */
+  padding-top: 30px;
+  margin: 30px 0;
+}
+.carousel .slick-prev:before,
+.carousel .slick-next:before {
+  color: #666;
+  font-size: 30px;
+}
+.carousel .slick-prev:before {
+  margin-right: -80px;
+}
+.carousel .slick-next:before {
+  margin-left: -80px;
+}
+.carousel img {
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.bio-photos,
+.bio-text {
+	margin-top: 60px;
+}
+
+.formal-training,
+.contact-info {
+	margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  #sidebarCollapse {
+    position: fixed;
+    top: 90px;
+    left: 5px;
+    z-index: 3000;
+    background: #6d7fcc;
+    display: block;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    box-shadow: 2px 2px 4px -2px gray;
+  }
+
+  .container-fluid,
+   #artist-header {
+      width: 100vw;
+      margin-left: auto;
+    }
+    #sidebar {
+        margin-left: -255px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebar.active #sidebarCollapse {
+        left: 260px;
+    }
+    .grid-item {
+      width: 33%;
+      padding: 1%;
+    }
+}

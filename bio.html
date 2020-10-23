@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Peter Vroemen">
+
+    <title>Peter Vroemen - bio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-lightbox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/custom.css">
+  </head>
+  <body>
+    <nav id="sidebar" class="navbar navbar-light fixed-top">
+    <button id="sidebarCollapse" type="button" data-toggle="collapse" aria-expanded="false" class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <a class="navbar-brand" href="./index.html">Peter Vroemen</a>
+      <div>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="./bio.html">Bio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./showcase.html">Showcase</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./sketches.html">Sketches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./prints.html">Prints</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <img id="fixed-image-header" src="./images/showcase/header_image.jpg" />
+    <header id="artist-header">
+      <h1>Peter Vroemen</h1>
+      <img class="birds" src="./images/birds_on_a_wire.png" />
+    </header>
+
+<main role="main" class="container-fluid">
+  <div class="row bio-text">
+    <div class="col-lg-4">
+      <img class="portfolio-photo" src="./images/bio/peter.jpg" />
+    </div>
+    <div class="col-lg-8">
+      <h2>Bio</h2>
+      <p>
+        My work experience started as a Draftsperson working with town planing and lands in the Yellowknife office of the government of the North West Territories. One of the more interesting projects was drawing up early proposals for the boundry lines to create a new region called Nunavut.
+      </p>
+      <p>
+        Returning to the south and retraining as a carpenter I quickly learned how structures fit together almost sculptural in geometric terms, with a strong emphasis on functionality. Once you completed the house the goal was to live in it comfortably and efficiently.
+      </p>
+      <p>
+        From carpentry I moved to outdoor activities working with the National Capital Commission to maintain parks and recreational areas in the Ottawa region. Eventually working at the prime minister's residence as acting head gardener overseeing the planting and maintenance of thousands of annuals and perennials yearly.
+      </p>
+      <p>
+        My interest in art has been a search, with attempts to explore the uses of clay, wood,  oil, watercolor, pen and ink and to capture something of the ever evolving and joyous experience that is art.
+      </p>
+      <p>
+        Silk screen printing has opened doors of perception for me with endless possibilities to create and express what I see and how I see it.
+      </p>
+      <p>
+      <h2 class="formal-training">Formal Training</h2>
+        1977: Arts and Crafts program at Algonquin College with a specialized in Metallurgy, Color theory, and Life drawing. </br>
+        1980-2020: Ottawa school of Art. <br/>
+        Etching courses with Leonard Gerbrant and Rob Hinchley. <br/>
+        Four years of silk screen printing with Farouk Kaspaules. <br/>
+      </p>
+      <h2 class="contact-info">Contact Info</h2>
+      <p>
+        Email: <a href="mailto:peterpaulartist@gmail.com">peterpaulartist@gmail.com</a>
+      </p>
+    </div>
+  </div>
+    <div class="row bio-photos">
+      <div class="col-lg-4">
+        <img class="birds" src="./images/bio/colorful_balloons_in_the_studio.jpg" />
+      </div>
+      <div class="col-lg-4">
+        <img class="birds" src="./images/bio/hands.jpg" />
+      </div>
+      <div class="col-lg-4">
+        <img class="birds" src="./images/bio/glasses_and_blue_eyes_in_studio.jpg" />
+      </div>
+    </div>
+</main><!-- /.container -->
+
+<script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
+<script type="text/javascript" src="./js/slick-lightbox.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.grid').masonry({
+    itemSelector: '.grid-item'
+  });
+
+  $('.carousel').slick({
+    infinite: true,
+    mobileFirst: true,
+    autoplay: true,
+    dots: true,
+    arrows: false
+  });
+
+  $('.grid').slickLightbox({
+    itemSelector        : 'a',
+    navigateByKeyboard  : true
+  });
+
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+  });
+});
+</script>
+</html>
