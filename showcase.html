@@ -158,10 +158,6 @@
 <script type="text/javascript" src="./js/slick-lightbox.min.js"></script>
 <script>
 $(document).ready(function(){
-  $('.grid').masonry({
-    itemSelector: '.grid-item'
-  });
-
   $('.carousel').slick({
     infinite: true,
     mobileFirst: true,
@@ -170,13 +166,17 @@ $(document).ready(function(){
     arrows: false
   });
 
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+  });
+});
+$(window).on("load", function() {
+  $('.grid').masonry({
+    itemSelector: '.grid-item'
+  });
   $('.grid').slickLightbox({
     itemSelector        : 'a',
     navigateByKeyboard  : true
-  });
-
-  $('#sidebarCollapse').on('click', function () {
-    $('#sidebar').toggleClass('active');
   });
 });
 </script>
