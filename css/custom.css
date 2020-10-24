@@ -252,7 +252,6 @@ a[aria-expanded="true"] {
 }
 
 .carousel-container {
-  /* background-color: rgba(218, 223, 225, .5); */
   padding-top: 30px;
   margin: 30px 0;
 }
@@ -468,5 +467,8 @@ a[aria-expanded="true"] {
   .grid-item {
     width: 33%;
     padding: 1%;
+  }
+  .carousel img {
+    height: 300px;
   }
 }

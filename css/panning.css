@@ -57,7 +57,6 @@
   font-size: 40px;
 }
 
-
 strong {
   font-weight: 900;
   letter-spacing: 2px;
@@ -68,4 +67,15 @@ strong {
 
 html, body {
   height: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+  .title .sub-title {
+    font-size: 25px;
+  }
+
 }
